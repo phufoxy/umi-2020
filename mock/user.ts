@@ -87,6 +87,14 @@ export default {
       });
       return;
     }
+    if (password === 'admin' && userName === 'admin') {
+      res.send({
+        status: 'ok',
+        type,
+        currentAuthority: 'persion',
+      });
+      return;
+    }
     if (password === 'ant.design' && userName === 'user') {
       res.send({
         status: 'ok',

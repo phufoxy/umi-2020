@@ -33,11 +33,11 @@ const plugins: IPlugin[] = [
       },
       pwa: pwa
         ? {
-            workboxPluginMode: 'InjectManifest',
-            workboxOptions: {
-              importWorkboxFrom: 'local',
-            },
-          }
+          workboxPluginMode: 'InjectManifest',
+          workboxOptions: {
+            importWorkboxFrom: 'local',
+          },
+        }
         : false,
       // default close dll, because issue https://github.com/ant-design/ant-design-pro/issues/4665
       // dll features https://webpack.js.org/plugins/dll-plugin/
@@ -131,6 +131,13 @@ export default {
               icon: 'eye',
               path: '/list-table',
               component: './list/table-list',
+            },
+            {
+              name: 'Basic list',
+              icon: 'plus',
+              path: '/list-basic',
+              component: './list/basic-list',
+              authority: ['admin', 'user'],
             },
             {
               component: './404',
