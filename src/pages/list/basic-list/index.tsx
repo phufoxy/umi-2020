@@ -151,7 +151,8 @@ class BasicList extends Component<BasicListProps, BasicListState> {
 
     return (
       <>
-        <PageHeaderWrapper>
+        <PageHeaderWrapper content="content" title="title"
+        >
           <div className={styles.standardList}>
             <Card bordered={false}>
               <Row>

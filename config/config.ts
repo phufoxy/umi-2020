@@ -18,11 +18,11 @@ const plugins: IPlugin[] = [
       dva: {
         hmr: true,
       },
-      locale: {
+      g: {
         // default false
         enable: true,
         // default zh-CN
-        default: 'zh-CN',
+        default: 'en-US',
         // default true, when it is true, will use `navigator.language` overwrite default
         baseNavigator: true,
       },
@@ -106,6 +106,7 @@ export default {
               name: 'welcome',
               icon: 'smile',
               component: './Welcome',
+              authority: []
             },
             {
               path: '/admin',
@@ -119,25 +120,35 @@ export default {
               icon: 'table',
               path: '/list',
               component: './ListTableList',
+              authority: []
             },
             {
               name: 'list table ',
               icon: 'eye',
               path: '/list-sample',
               component: './ListTableSample',
+              authority: []
             },
             {
               name: 'list table ',
               icon: 'eye',
               path: '/list-table',
               component: './list/table-list',
+              authority: []
             },
             {
               name: 'Basic list',
               icon: 'plus',
               path: '/list-basic',
               component: './list/basic-list',
-              authority: ['admin', 'user'],
+              authority: ['admin', 'user', 'persion'],
+            },
+            {
+              name: 'Sample list',
+              icon: 'qq',
+              path: '/sample-basic',
+              component: './list/sample-list',
+              authority: ['admin', 'user', 'persion'],
             },
             {
               component: './404',
